@@ -14,6 +14,7 @@ import numpy as np
 model = load_model("test.h5")
 
 #Resizze to 28px28p
+#Use painteditor with 3-5pixel tickness
 img = Image.open('/mnt/c/Users/Anubhav_R/Desktop/tmp/AIHPC/3.png').convert("L")
 
 plt.subplot(1, 2, 1)
