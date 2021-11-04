@@ -17,7 +17,7 @@ batch_size = 128
 num_classes = 10
 epochs = 12
 
-activation = 'relu'
+activation = 'Adam'
 verbose = 1
 
 
