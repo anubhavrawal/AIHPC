@@ -1,0 +1,12 @@
+#!/bin/sh -login
+#PBS -l mem=1000mb
+#PBS -l nodes=1:ppn=4
+#PBS -l walltime=01:00:00
+#PBS -N main.py
+#PBS -j oe
+
+## Automatically calculate the number of processors
+NP=$(cat ${PBS_NODEFILE} | wc -l)
+export OMP_NUM_THREADS=${NP}
+
+cd ~/demo/python3 main.py ${NP}$
